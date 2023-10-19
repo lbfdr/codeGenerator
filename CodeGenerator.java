@@ -24,15 +24,7 @@ public class CodeGenerator {
                             .enableSwagger() // 开启 swagger 模式
                             //.fileOverride() // 覆盖已生成文件
                             .outputDir("D:\\java\\idea_projects\\scheduling\\src\\main\\java"); // 指定输出目录
-                })/*.dataSourceConfig(builder -> builder.typeConvertHandler((globalConfig, typeRegistry, metaInfo) -> {
-                    int typeCode = metaInfo.getJdbcType().TYPE_CODE;
-                    if (typeCode == Types.SMALLINT) {
-                        // 自定义类型转换
-                        return DbColumnType.INTEGER;
-                    }
-                    return typeRegistry.getColumnType(metaInfo);
-
-                }))*/
+                })
                 .packageConfig(builder -> {
                     builder.parent("com.cn.topsroboteer.scheduling.administration.userManage") // 设置父包名（都是在outputDir指向的目录下的子目录）
                             //.moduleName("demo2") // 设置父包模块名,默认值为"" （都是在outputDir指向的目录下的子//目录）
