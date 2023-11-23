@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
 import java.util.Collections;
 
+
 /**
  * @Author 李波帆
  * @Version 1.0.2
@@ -23,10 +24,14 @@ public class CodeGenerator {
                     builder.author("libofan") // 设置作者
                             .enableSwagger() // 开启 swagger 模式
                             //.fileOverride() // 覆盖已生成文件
-                            .outputDir("D:\\java\\idea_projects\\scheduling\\src\\main\\java"); // 指定输出目录
+                            .outputDir("D:/mybatis-plus"); // 指定输出目录
                 })
                 .packageConfig(builder -> {
                     builder.parent("com.cn.topsroboteer.scheduling.administration.userManage") // 设置父包名（都是在outputDir指向的目录下的子目录）
+                            .controller("controller") // 指定控制器包名，默认值controller
+                            .service("service") //指定service接口包名，默认值service
+                            .serviceImpl("service.impl") //指定service接口实现了包名，默认值service.impl
+                            .mapper("dao") //指定mapper层接口包名，默认值mapper
                             //.moduleName("demo2") // 设置父包模块名,默认值为"" （都是在outputDir指向的目录下的子//目录）
                             //.other("model.dto") // 设置其他包名，默认包名为other
                             //.entity("entity") //指定实体包名,默认值为entity
@@ -35,7 +40,7 @@ public class CodeGenerator {
                 .strategyConfig(builder -> {
                     //builder.addInclude("admin_auth","admin_user","allocation_ref","auth_role_ref","daily","department","post","project","task","task_allocation","user_department_ref","user_role") // 设置需要生成的表名,支持正则匹配、例如 ^t_.* 所有 t_ 开头的表名
                     builder.addInclude("project_group_relation")
-                            .addTablePrefix("t_", "c_","tbl_") // 设置过滤表前缀,例如t_admin => Admin,c_admin => Admin...
+                            .addTablePrefix("t_", "c_","tbl_") // 设置过滤表前缀
                             .controllerBuilder()//返回Controller.Builder
                             .enableRestStyle()//开启生成@RestController控制器
                             .serviceBuilder()//返回Service.Builder
@@ -56,3 +61,4 @@ public class CodeGenerator {
                 .execute();
     }
 }
+
