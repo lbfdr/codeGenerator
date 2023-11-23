@@ -35,7 +35,7 @@ public class CodeGenerator {
                 .strategyConfig(builder -> {
                     //builder.addInclude("admin_auth","admin_user","allocation_ref","auth_role_ref","daily","department","post","project","task","task_allocation","user_department_ref","user_role") // 设置需要生成的表名,支持正则匹配、例如 ^t_.* 所有 t_ 开头的表名
                     builder.addInclude("project_group_relation")
-                            .addTablePrefix("t_", "c_","tbl_") // 设置过滤表前缀
+                            .addTablePrefix("t_", "c_","tbl_") // 设置过滤表前缀,例如t_admin => Admin,c_admin => Admin...
                             .controllerBuilder()//返回Controller.Builder
                             .enableRestStyle()//开启生成@RestController控制器
                             .serviceBuilder()//返回Service.Builder
