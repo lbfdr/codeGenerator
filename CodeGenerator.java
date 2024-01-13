@@ -1,7 +1,5 @@
 package com.example.springboot2.codegenerator;
-
 import com.baomidou.mybatisplus.annotation.FieldFill;
-
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
