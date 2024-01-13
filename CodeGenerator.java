@@ -1,13 +1,21 @@
+<<<<<<< HEAD
 package com.example.springboot2.codegenerator;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
+=======
+package com.springboot;
+
+>>>>>>> 1d2c9bafdc5d27266981ceca3177faa1dc0006a0
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.OutputFile;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
+<<<<<<< HEAD
 import com.baomidou.mybatisplus.generator.fill.Column;
+=======
+>>>>>>> 1d2c9bafdc5d27266981ceca3177faa1dc0006a0
 
 import java.util.Collections;
 
@@ -67,3 +75,4 @@ public class CodeGenerator {
                 .execute();
     }
 }
+
